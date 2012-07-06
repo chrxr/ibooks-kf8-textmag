@@ -8,7 +8,7 @@ Python script to convert iBooks fixed layout to KF8 files and add text magnifica
 ###############
 
 THIS IS A WORK IN PROGRESS, BUT IT WORKS
-========
+====
 
 If anyone has any suggestions for simplifying this code it would be gratefully recieved.
 It does work, as long as all the conditions below are met.

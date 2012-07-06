@@ -566,13 +566,13 @@ def amendCSS(css, div_list):
         for a in range(len(newcss[key])):
             attr = newcss[key][a]
             if re.search('top', attr):
-                attr = minus5('top', attr, key)
+                attr = topleft('top', attr, key)
                 newcss[key][a] = attr
             if re.search('left', attr):
-                attr = minus5('left', attr, key)
+                attr = topleft('left', attr, key)
                 newcss[key][a] = attr
             if re.search('font-size', attr):
-                attr = times2(attr, key)
+                attr = fontsizing(attr, key)
                 newcss[key][a] = attr
     return newcss
 
@@ -585,7 +585,7 @@ def apendCSS(newcss, css, stylesheet_loc):
         style_soup.write(css)
         style_soup.close()
 
-def times2(attr, key): #Multiplies font-size by 2
+def fontsizing(attr, key): #Multiplies font-size by 2
     fs = attr.split(':')
     fsm = re.sub('em', '', fs[1])
     fsf = float(fsm)
@@ -596,13 +596,13 @@ def times2(attr, key): #Multiplies font-size by 2
     attr = ':'.join(fs)
     return attr
         
-def minus5(direc, attr, key): #Subtracts 5% from top/length styles
+def topleft(direc, attr, key): #Subtracts 2% from top/length styles
     direc = attr.split(':')
     direcm = re.sub('%', '', direc[1])
     direcf = float(direcm)
     if direcf - 5 < 0:
         print('Warning: the target div with id ' + key + ' is going to appear off the screen. You will need to amend.')
-    new_direc = str(round(direcf - 5)) + '%'
+    new_direc = str(round(direcf - 2)) + '%'
     direc[1] = new_direc
     attr = ':'.join(direc)
     return attr

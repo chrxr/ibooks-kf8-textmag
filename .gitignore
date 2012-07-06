@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+/__pycache__
+*.project
+*.pydevproject
+*.metadata
+*.mobi
+*.xhtml
+/archive
+/workshop
+=======
+# Build and Release Folders
+bin-debug/
+bin-release/
+
+# Project property files
+.actionScriptProperties
+.flexProperties
+.settings/
+.project
+>>>>>>> afaabefe645dfa62b0d8e39b998bc6c3a9c691b4

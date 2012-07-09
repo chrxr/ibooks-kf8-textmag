@@ -25,12 +25,17 @@ Guidelines for text magnification:
   
   
 `<div class="pg_01_mag_01">	
+
     <p class="p1Text001">This text should appear between the top and middle lines in a normal font.
     </p>
+    
 </div>
+
 <div class="pg_01_mag_02"> 
+
 	<p class="p1Text002">This text should appear between the middle and bottom lines in Rosewood.
 	</p>  
+	
 </div>`
   
 

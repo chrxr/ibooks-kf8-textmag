@@ -22,14 +22,14 @@ Usage: Navigate to 'script' folder in the command line, then type "python ibooks
 Guidelines for text magnification:
   
   * Each block of text that is to be magnified must be surrounded by a div with a unique class of the pattern pg_##_mag_## eg pg_01_mag_01 (you can change this pattern in the code, simply search for "div_finder" and alter the regex. Positioning and text sizing should be done by styling this containing div:
-  
+
     <div class="pg_01_mag_01">	
     <p class="p1Text001">This text should appear between the top and middle lines in a normal font.</p>  
     </div>
     <div class="pg_01_mag_02"> 
     <p class="p1Text002">This text should appear between the middle and bottom lines in Rosewood.</p>  	
     </div>
-  
+
   * ALL POSITIONING MUST BE DONE IN PERCENTAGES, AND FONT SIZES IN EMS
   * ALL CONTAINER DIVS MUST BE POSITIONED ABSOLUTELY  
   * You can alter the CSS for the text mag boxes by searching for "mag_boxes"

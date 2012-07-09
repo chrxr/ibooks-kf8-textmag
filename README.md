@@ -23,7 +23,7 @@ Guidelines for text magnification:
   
   * Each block of text that is to be magnified must be surrounded by a div with a unique class of the pattern pg_##_mag_## eg pg_01_mag_01 (you can change this pattern in the code, simply search for "div_finder" and alter the regex. Positioning and text sizing should be done by styling this containing div:
 
-'''html
+'''
 <div class="pg_01_mag_01">	
 <p class="p1Text001">This text should appear between the top and middle lines in a normal font.
 </p>  

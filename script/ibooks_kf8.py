@@ -534,14 +534,16 @@ def css_inserter(height, width, ind_ext_path, style_loc, div_list):
 def getCSS(stylesheet_loc):
     finder = re.compile('.*{')
     style_dict = {}
+    stylelist2 = []
     file = open(stylesheet_loc)
     stylesheet = file.read()
     styled = (format(stylesheet.replace("\n", "")))
     stylelist = list(re.sub(r'\s\s|\t', '', styled))
-    for index in range(len(stylelist)):
-        if stylelist[index] in ("{", "}"):
-            stylelist.insert(index + 1, "$")
-    styles = ''.join(stylelist).split('$')
+    for value in stylelist:
+        stylelist2.append(value)
+        if value in ("{", "}"):
+            stylelist2.append("$")
+    styles = ''.join(stylelist2).split('$')
     for index in range(len(styles)):
         if re.search(finder, styles[index]):
             styles[index] = re.sub('{', '', styles[index])

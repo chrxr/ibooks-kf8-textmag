@@ -33,7 +33,7 @@ Usage: Navigate to 'script' folder in the command line, then type "python ibooks
 	   	</div>
   
   * If the script doesn't find a match for the identifier, it will not insert any text-mag, and will simply convert the file to KF8 format.
-  * ALL POSITIONING MUST BE DONE IN PERCENTAGES, AND FONT SIZES IN EMS
+  * ALL POSITIONING MUST BE DONE IN PERCENTAGES, AND FONT SIZES IN EMS (if not text mag boxes will appear in strange places and font sizes will be wrong)
   * ALL CONTAINER DIVS MUST BE POSITIONED ABSOLUTELY  
   * You can alter the CSS for the text mag boxes by searching for "mag_boxes"
   * By default the text-mag boxes will be positioned 2% less on top and left

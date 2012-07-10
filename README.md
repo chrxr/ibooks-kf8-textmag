@@ -8,7 +8,7 @@ Python script to convert iBooks fixed layout to KF8 files and add text magnifica
   
 ###############
 
-THIS IS A WORK IN PROGRESS, BUT IT WORKS
+#### THIS IS A WORK IN PROGRESS, BUT IT WORKS
 
 If anyone has any suggestions for simplifying this code it would be gratefully recieved.
 It does work, as long as all the conditions below are met.
@@ -20,7 +20,7 @@ If you run into any serious issues let me know.
   
 Usage: Navigate to 'script' folder in the command line, then type "python ibooks_kf8.py"
 
-Guidelines for text magnification:
+## Guidelines for text magnification
   
   * Each block of text that is to be magnified must be surrounded by a div with a unique class of the pattern pg\_##\_mag_## eg pg_01_mag_01 (you can change this pattern in the code, simply search for "div_finder" and alter the regex. Positioning and text sizing should be done by styling this containing div:
 
@@ -31,7 +31,8 @@ Guidelines for text magnification:
 	   	<div class="pg_01_mag_02"> 
 	   		<p class="p1Text002">This text should appear between the middle and bottom lines in Rosewood.</p>  	
 	   	</div>
-
+  
+  * If the script doesn't find a match for the identifier, it will not insert any text-mag, and will simply convert the file to KF8 format.
   * ALL POSITIONING MUST BE DONE IN PERCENTAGES, AND FONT SIZES IN EMS
   * ALL CONTAINER DIVS MUST BE POSITIONED ABSOLUTELY  
   * You can alter the CSS for the text mag boxes by searching for "mag_boxes"
@@ -39,7 +40,7 @@ Guidelines for text magnification:
   * By default font-size for magnified text is 2 * original em value
   * You can change these defaults by searching for "topleft" and "fontsizing"
   
-Things you need for this to work:
+## Things you need for this to work
 
   * Python 3+ and BeautifulSoup4 module installed
   * Folder structure must be as it is on git
@@ -50,7 +51,7 @@ Things you need for this to work:
   * Styles should be placed in folder named /css
   * Best to use RGB Jpg files. Transparent PNG files won't work at all.
   
-Things it doesn't do:
+## Things it doesn't do
   
   * Resolve internal or TOC links: If you have a full NCX TOC the links will have to be changed by hand. The same for HTML TOCs and other internal links
   * Guarantee that things will work: Especially when it comes to SVG. Very likely you'll have to re-do or at least tweak SVG text.

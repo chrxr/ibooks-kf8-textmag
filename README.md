@@ -15,7 +15,7 @@ It does work, as long as all the conditions below are met.
 If you run into any serious issues let me know.
 
   * File for conversion must be placed in /files folder
-  * Output place in /repubbed folder
+  * Output is placed in /repubbed folder
   * Sample file is included in repository
   
 Usage: Navigate to 'script' folder in the command line, then type "python ibooks_kf8.py"

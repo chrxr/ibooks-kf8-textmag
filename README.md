@@ -1,6 +1,9 @@
 iBooks-KF8
 ==========
 
+#### UPDATE: NOW INCLUDES SAMPLE FILE IN "FILES" FOLDER
+
+
 Python script to convert iBooks fixed layout to KF8 files and add text magnification boxes
 
   * You can convert multiple files at the same time. Just put them all in the files folder.

@@ -33,6 +33,7 @@ def main():
         #
         re_zip(repub_path, extract_path, extract_list, new_file_locs)
         print('All done\n')
+    clean_up(end_path, extract_path, merged_loc)
 
     
 #LISTS INPUT FILES
@@ -655,6 +656,21 @@ def mkdir_p(path):
         if exc.errno == errno.EEXIST:
             pass
         else: raise
+
+#ClEAN UP FUNC        
+def clean_up(*arg):
+    for path in arg:
+        clean_up_func(path)
+    
+def clean_up_func(path):
+    for root, dirs, files in os.walk(path, topdown=False):
+        for name in files:
+            if name != ".gitignore":
+                os.remove(os.path.join(root, name))
+            else:
+                continue
+        for name in dirs:
+            os.rmdir(os.path.join(root, name))
         
 #CONTENT WRAPPER
 def wrap(to_wrap, wrap_in):

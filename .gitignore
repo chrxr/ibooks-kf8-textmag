@@ -4,7 +4,6 @@
 *.pydevproject
 *.metadata
 *.mobi
-*.xhtml
 /archive
 /workshop
 =======
